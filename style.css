@@ -1,11 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
 
 :root {
-  --color-1: #fff;
+  /* --color-1: #fff;
   --color-2: #111;
   --color-3: #cb3d30;
   --color-4: #191715;
-  --color-5: #d29437;
+  --color-5: #d29437; //this primari color */
+
+  /* Background Colors */
+  --primary-background: #191715;
+  --secondary-background: #111;
+  --primary-text: #fff;
+  --secondary-text: #ccc;
+  --accent-text: #d29437;
+  --primary-button: #d29437;
+  --secondary-button: #cb3d30;
+  --accent-color-1: #4caf50;
+  --accent-color-2: #03a9f4;
+  --accent-color-3: #e91e63;
+  --accent-color-4: #9c27b0;
+  --borders: #757575;
+  --dividers: #333;
+  --card-background: #292929;
+  --container-background: #212121;
 }
 
 * {
@@ -22,7 +39,7 @@ body {
 
 p {
   font-weight: 300;
-  color: var(--color-2);
+  color: var(--secondary-background);
 }
 
 .banner {
@@ -40,25 +57,26 @@ p {
 .banner .content {
   max-width: 900px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 15px 20px;
 }
 
 .banner .content h2 {
   font-size: 3.5em;
-  color: var(--color-1);
+  color: var(--accent-text);
 }
 
 .banner .content p {
   font-size: 1em;
-  color: var(--color-1);
+  font-weight: 400;
+  color: var(--primary-text);
 }
 
 .btn {
   font-size: 1em;
-  color: var(--color-1);
-  background: var(--color-5);
+  color: var(--primary-text);
+  background: var(--primary-button);
   display: inline-block;
   padding: 10px 30px;
   margin-top: 20px;
@@ -85,27 +103,27 @@ header {
   transition: 0.5s;
 }
 header.sticky {
-  background: var(--color-1);
+  background: var(--primary-background);
   padding: 10px 100px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 header .logo {
-  color: var(--color-1);
+  color: var(--primary-text);
   font-weight: 700;
   font-size: 1.8em;
   text-decoration: none;
 }
 
 header.sticky .logo {
-  color: var(--color-2);
+  color: var(--accent-text);
 }
 
 header .logo span {
-  color: var(--color-5);
+  color: var(--accent-color-3);
   font-size: 1.4em;
-  font-weight: 700;
-  padding-right: 2px;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
 }
 
 header .navigation {
@@ -120,17 +138,17 @@ header .navigation li {
 
 header .navigation li a {
   text-decoration: none;
-  color: var(--color-1);
+  color: var(--primary-text);
   font-weight: 300;
   font-size: 1.1em;
 }
 
 header.sticky .navigation li a {
-  color: var(--color-2);
+  color: var(--accent-text);
 }
 
 header .navigation li a:hover {
-  color: var(--color-5);
+  color: var(--primary-text);
 }
 
 section {
@@ -149,13 +167,13 @@ section {
   width: 50%;
 }
 .titleText {
-  color: var(--color-2);
+  color: var(--secondary-background);
   font-size: 2em;
   font-weight: 300;
 }
 
 .titleText span {
-  color: var(--color-5);
+  color: var(--accent-text);
   font-weight: 700;
   font-size: 1.5em;
 }
@@ -193,7 +211,6 @@ section {
 .menu .content .box {
   width: 340px;
   margin: 20px;
-  border: 15px solid var(--color-1);
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.05);
 }
 
@@ -218,7 +235,7 @@ section {
 
 .menu .content .box .text h3 {
   font-weight: 400px;
-  color: var(--color-2);
+  color: var(--secondary-background);
 }
 
 .expert .content {
@@ -255,17 +272,18 @@ section {
 
 .expert .content .box .text h3 {
   font-weight: 400;
-  color: var(--color-2);
+  color: var(--secondary-background);
 }
 
 .testimonials {
   background: url(img/background.jpg);
   background-size: cover;
+  opacity: 0.9;
 }
 
 .white .titleText,
 .white p {
-  color: var(--color-1);
+  color: var(--primary-text);
 }
 
 .testimonials .content {
@@ -279,7 +297,7 @@ section {
 .testimonials .content .box {
   width: 340px;
   margin: 20px;
-  background: var(--color-1);
+  background: var(--primary-text);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -329,14 +347,14 @@ section {
 
 .contactForm {
   padding: 75px 50px;
-  background: var(--color-1);
+  background: var(--card-background);
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   margin-top: 50px;
 }
 
 .contactForm h3 {
-  color: var(--color-2);
+  color: var(--accent-text);
   font-size: 1.2em;
   margin-bottom: 20px;
   font-weight: 500;
@@ -353,7 +371,7 @@ section {
   width: 100%;
   border: 1px solid var(--color-4);
   padding: 10px;
-  color: var(--color-2);
+  color: var(--secondary-background);
   outline: none;
   font-size: 16px;
   font-weight: 300;
@@ -362,8 +380,8 @@ section {
 
 .contactForm .inputBox input[type="submit"] {
   font-size: 1em;
-  color: var(--color-1);
-  background: var(--color-5);
+  color: var(--primary-text);
+  background: var(--secondary-button);
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
@@ -376,7 +394,7 @@ section {
 }
 
 .copyrightText {
-  background: var(--color-5);
+  background: var(--accent-text);
   padding: 10px 40px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
