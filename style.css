@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
 
 :root {
-  /* --color-1: #fff;
-  --color-2: #111;
-  --color-3: #cb3d30;
-  --color-4: #191715;
-  --color-5: #d29437; //this primari color */
-
-  /* Background Colors */
   --primary-background: #191715;
   --secondary-background: #111;
   --primary-text: #fff;
@@ -327,22 +320,15 @@ section {
 }
 
 .testimonials .content .box .text p {
-  color: var(--color-2);
+  color: var(--secondary-background);
   font-style: italic;
 }
 
 .testimonials .content .box .text h3 {
   margin: 20px auto;
   font-size: 1em;
-  color: var(--color-5);
+  color: var(--secondary-background);
   font-weight: 600;
-}
-
-.contact {
-  background: url(img/background2.jpg);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
 }
 
 .contactForm {
@@ -369,7 +355,7 @@ section {
 .contactForm .inputBox input,
 .contactForm .inputBox textarea {
   width: 100%;
-  border: 1px solid var(--color-4);
+  border: 1px solid var(--borders);
   padding: 10px;
   color: var(--secondary-background);
   outline: none;
@@ -401,7 +387,7 @@ section {
 }
 
 .copyrightText p {
-  color: var(--color-4);
+  color: var(--secondary-background);
 }
 
 @media (max-width: 991px) {
@@ -424,13 +410,13 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: var(--color-1);
+    background: var(--accent-color-1);
   }
   header .navigation li {
     margin-left: 0;
   }
   header .navigation li a {
-    color: var(--color-2);
+    color: var(--accent-color-1);
     font-size: 1.6em;
   }
 
@@ -461,7 +447,7 @@ section {
 
   .banner .content h2 {
     font-size: 3em;
-    color: var(--color-1);
+    color: var(--secondary-background);
   }
 
   .row {
@@ -516,6 +502,6 @@ section {
 @media (max-width: 480px) {
   .banner .content h2 {
     font-size: 2.2em;
-    color: var(--color-1);
+    color: var(--primary-text);
   }
 }
