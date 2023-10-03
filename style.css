@@ -1,21 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
 
 :root {
-  --primary-background: #191715;
-  --secondary-background: #111;
-  --primary-text: #fff;
-  --secondary-text: #ccc;
-  --accent-text: #d29437;
-  --primary-button: #d29437;
-  --secondary-button: #cb3d30;
-  --accent-color-1: #4caf50;
-  --accent-color-2: #03a9f4;
-  --accent-color-3: #e91e63;
-  --accent-color-4: #9c27b0;
-  --borders: #757575;
-  --dividers: #333;
-  --card-background: #292929;
-  --container-background: #212121;
+  --primary-color: #fff;
+  --secondary-color: #ff914d;
+  --button-color: #a51c17;
+  --secondary-button-color: #5f0a87;
+  --dark-text: #1a1a1a;
 }
 
 * {
@@ -32,7 +22,7 @@ body {
 
 p {
   font-weight: 300;
-  color: var(--secondary-background);
+  color: var(--dark-text);
 }
 
 .banner {
@@ -40,7 +30,7 @@ p {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: url(img/1.jpg);
   background-size: cover;
@@ -50,26 +40,28 @@ p {
 .banner .content {
   max-width: 900px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
   padding: 15px 20px;
 }
 
 .banner .content h2 {
   font-size: 3.5em;
-  color: var(--accent-text);
+  color: var(--secondary-color);
+  margin-bottom: 1.6rem;
 }
 
 .banner .content p {
   font-size: 1em;
   font-weight: 400;
-  color: var(--primary-text);
+  color: var(--primary-color);
+  opacity: 0.7;
 }
 
 .btn {
   font-size: 1em;
-  color: var(--primary-text);
-  background: var(--primary-button);
+  color: var(--primary-color);
+  background: var(--button-color);
   display: inline-block;
   padding: 10px 30px;
   margin-top: 20px;
@@ -83,6 +75,7 @@ p {
   letter-spacing: 6px;
 }
 
+/* navigation */
 header {
   position: fixed;
   top: 0;
@@ -96,27 +89,13 @@ header {
   transition: 0.5s;
 }
 header.sticky {
-  background: var(--primary-background);
+  background: var(--secondary-color);
   padding: 10px 100px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-header .logo {
-  color: var(--primary-text);
-  font-weight: 700;
-  font-size: 1.8em;
-  text-decoration: none;
-}
-
-header.sticky .logo {
-  color: var(--accent-text);
-}
-
-header .logo span {
-  color: var(--accent-color-3);
-  font-size: 1.4em;
-  font-weight: 600;
-  letter-spacing: 0.2rem;
+header .logo img {
+  width: 50%;
 }
 
 header .navigation {
@@ -131,17 +110,21 @@ header .navigation li {
 
 header .navigation li a {
   text-decoration: none;
-  color: var(--primary-text);
+  color: var(--primary-color);
   font-weight: 300;
   font-size: 1.1em;
 }
 
 header.sticky .navigation li a {
-  color: var(--accent-text);
+  color: var(--primary-color);
+}
+
+header.sticky .navigation li a:hover {
+  color: var(--button-color);
 }
 
 header .navigation li a:hover {
-  color: var(--primary-text);
+  color: var(--secondary-color);
 }
 
 section {
@@ -160,13 +143,13 @@ section {
   width: 50%;
 }
 .titleText {
-  color: var(--secondary-background);
+  color: var(--dark-text);
   font-size: 2em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .titleText span {
-  color: var(--accent-text);
+  color: var(--secondary-color);
   font-weight: 700;
   font-size: 1.5em;
 }
@@ -193,6 +176,15 @@ section {
   flex-direction: column;
 }
 
+/* menu */
+.menu {
+  background: var(--secondary-color);
+}
+
+.menu span {
+  color: var(--primary-color);
+}
+
 .menu .content {
   display: flex;
   justify-content: center;
@@ -204,7 +196,14 @@ section {
 .menu .content .box {
   width: 340px;
   margin: 20px;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5);
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.6s;
+}
+.menu .content .box:hover {
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 1);
 }
 
 .menu .content .box .imgBx {
@@ -228,9 +227,10 @@ section {
 
 .menu .content .box .text h3 {
   font-weight: 400px;
-  color: var(--secondary-background);
+  color: var(--dark-text);
 }
 
+/* expert */
 .expert .content {
   display: flex;
   justify-content: center;
@@ -265,18 +265,18 @@ section {
 
 .expert .content .box .text h3 {
   font-weight: 400;
-  color: var(--secondary-background);
+  color: var(--dark-text);
 }
 
+/* testimonials */
 .testimonials {
   background: url(img/background.jpg);
   background-size: cover;
-  opacity: 0.9;
 }
 
 .white .titleText,
 .white p {
-  color: var(--primary-text);
+  color: var(--primary-color);
 }
 
 .testimonials .content {
@@ -290,11 +290,12 @@ section {
 .testimonials .content .box {
   width: 340px;
   margin: 20px;
-  background: var(--primary-text);
+  background: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 8px;
 }
 
 .testimonials .content .box .imgBx {
@@ -320,27 +321,44 @@ section {
 }
 
 .testimonials .content .box .text p {
-  color: var(--secondary-background);
+  color: var(--dark-text);
   font-style: italic;
 }
 
 .testimonials .content .box .text h3 {
   margin: 20px auto;
   font-size: 1em;
-  color: var(--secondary-background);
+  color: var(--dark-text);
   font-weight: 600;
+}
+
+/* contact */
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .contactForm {
   padding: 75px 50px;
-  background: var(--card-background);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  background: var(--secondary-color);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
   max-width: 500px;
   margin-top: 50px;
+  width: 50%;
+}
+
+.contactContainer .background {
+  width: 50%;
+}
+
+.contactContainer .background img {
+  max-width: 90%;
 }
 
 .contactForm h3 {
-  color: var(--accent-text);
+  color: var(--dark-text);
   font-size: 1.2em;
   margin-bottom: 20px;
   font-weight: 500;
@@ -355,9 +373,9 @@ section {
 .contactForm .inputBox input,
 .contactForm .inputBox textarea {
   width: 100%;
-  border: 1px solid var(--borders);
+  border: 1px solid var(--button-color);
   padding: 10px;
-  color: var(--secondary-background);
+  color: var(--dark-text);
   outline: none;
   font-size: 16px;
   font-weight: 300;
@@ -366,8 +384,8 @@ section {
 
 .contactForm .inputBox input[type="submit"] {
   font-size: 1em;
-  color: var(--primary-text);
-  background: var(--secondary-button);
+  color: var(--primary-color);
+  background: var(--button-color);
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
@@ -380,20 +398,21 @@ section {
 }
 
 .copyrightText {
-  background: var(--accent-text);
+  background: var(--secondary-color);
   padding: 10px 40px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .copyrightText p {
-  color: var(--secondary-background);
+  color: #777;
 }
 
 @media (max-width: 991px) {
   header,
   header .sticky {
     padding: 10px 20px;
+    background-color: var(--secondary-color);
   }
 
   header .navigation {
@@ -410,14 +429,18 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: var(--accent-color-1);
+    background: var(--primary-color);
+    color: var(--secondary-color);
   }
   header .navigation li {
     margin-left: 0;
   }
   header .navigation li a {
-    color: var(--accent-color-1);
+    color: var(--secondary-color);
     font-size: 1.6em;
+  }
+  header .navigation.active li a {
+    color: var(--secondary-color);
   }
 
   .menuToggle {
@@ -444,10 +467,13 @@ section {
   section {
     padding: 20px;
   }
-
+  .banner {
+    display: flex;
+    justify-content: center;
+  }
   .banner .content h2 {
     font-size: 3em;
-    color: var(--secondary-background);
+    color: var(--secondary-color);
   }
 
   .row {
@@ -502,6 +528,12 @@ section {
 @media (max-width: 480px) {
   .banner .content h2 {
     font-size: 2.2em;
-    color: var(--primary-text);
+    color: var(--secondary-color);
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .contactContainer .background {
+    display: none;
   }
 }
