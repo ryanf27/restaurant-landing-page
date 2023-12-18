@@ -2,8 +2,8 @@
 
 :root {
   --primary-color: #fff;
-  --secondary-color: #ff914d;
-  --button-color: #a51c17;
+  --secondary-color: #ff9452;
+  --button-color: #ad4301;
   --secondary-button-color: #5f0a87;
   --dark-text: #1a1a1a;
 }
@@ -178,7 +178,15 @@ section {
 
 /* menu */
 .menu {
-  background: var(--secondary-color);
+  background: #ffefe1;
+  background: -moz-linear-gradient(top, #ffefe1 0%, #ffb857 50%, #ffefe1 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #ffefe1 0%,
+    #ffb857 50%,
+    #ffefe1 100%
+  );
+  background: linear-gradient(to bottom, #ffefe1 0%, #ffb857 50%, #ffefe1 100%);
 }
 
 .menu span {
@@ -196,7 +204,7 @@ section {
 .menu .content .box {
   width: 340px;
   margin: 20px;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   background-color: var(--primary-color);
   border-radius: 8px;
   text-align: center;
@@ -343,10 +351,11 @@ section {
 .contactForm {
   padding: 75px 50px;
   background: var(--secondary-color);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   margin-top: 50px;
   width: 50%;
+  border-radius: 12px;
 }
 
 .contactContainer .background {
@@ -373,7 +382,6 @@ section {
 .contactForm .inputBox input,
 .contactForm .inputBox textarea {
   width: 100%;
-  border: 1px solid var(--button-color);
   padding: 10px;
   color: var(--dark-text);
   outline: none;
@@ -398,7 +406,7 @@ section {
 }
 
 .copyrightText {
-  background: var(--secondary-color);
+  background: #ff9452;
   padding: 10px 40px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
